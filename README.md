@@ -1,4 +1,4 @@
-# pwm-controler
+# pwm-controller
 ## これは何
 JetsonNanoでラジコンカーのサーボモータとスロットル用のモータの制御をするプログラム
 
