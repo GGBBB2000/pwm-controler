@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PWM Controller: pwm_controller.PWMController クラス</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PWM Controller
+   </div>
+   <div id="projectbrief">Jetson Nanoでサーボモータ、モータドライバへのPWM入力を制御するプログラムです</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'検索');
+</script>
+<script type="text/javascript" src="../../menudata.js"></script>
+<script type="text/javascript" src="../../menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('../../',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d5/da8/classpwm__controller_1_1PWMController.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="../../d5/da6/classpwm__controller_1_1PWMController-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">pwm_controller.PWMController クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>PWM制御クラス作成用の抽象クラス  
+ <a href="../../d5/da8/classpwm__controller_1_1PWMController.html#details">[詳解]</a></p>
+<div class="dynheader">
+pwm_controller.PWMController の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/ddb/classpwm__controller_1_1PWMController__inherit__graph.png" border="0" usemap="#pwm__controller_8PWMController_inherit__map" alt="Inheritance graph"/></div>
+<map name="pwm__controller_8PWMController_inherit__map" id="pwm__controller_8PWMController_inherit__map">
+<area shape="rect" id="node4" href="../../d7/dad/classpwm__controller_1_1Steer.html" title="ステアリングPWM出力制御クラス " alt="" coords="5,155,151,181"/>
+<area shape="rect" id="node5" href="../../dd/dbe/classpwm__controller_1_1Throttle.html" title="スロットルPWM出力制御クラス " alt="" coords="175,155,333,181"/>
+</map>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+pwm_controller.PWMController 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="../../dd/d3d/classpwm__controller_1_1PWMController__coll__graph.png" border="0" usemap="#pwm__controller_8PWMController_coll__map" alt="Collaboration graph"/></div>
+<center><span class="legend">[<a target="top" href="../../graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:aa326ff9ba5011dbf168d9c8742bb892d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da8/classpwm__controller_1_1PWMController.html#aa326ff9ba5011dbf168d9c8742bb892d">__init__</a> (self, config)</td></tr>
+<tr class="memdesc:aa326ff9ba5011dbf168d9c8742bb892d"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM制御クラスの初期化  <a href="#aa326ff9ba5011dbf168d9c8742bb892d">[詳解]</a><br /></td></tr>
+<tr class="separator:aa326ff9ba5011dbf168d9c8742bb892d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57f304c762460a04c0327d708b93a43a"><td class="memItemLeft" align="right" valign="top"><a id="a57f304c762460a04c0327d708b93a43a"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>setScale</b></td></tr>
+<tr class="separator:a57f304c762460a04c0327d708b93a43a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a5d09c851e995a0d03182e6ac694bb01f"><td class="memItemLeft" align="right" valign="top"><a id="a5d09c851e995a0d03182e6ac694bb01f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>current_value</b></td></tr>
+<tr class="separator:a5d09c851e995a0d03182e6ac694bb01f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fa22d220f6b89d700582781b9476ed6"><td class="memItemLeft" align="right" valign="top"><a id="a6fa22d220f6b89d700582781b9476ed6"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>pwm</b></td></tr>
+<tr class="separator:a6fa22d220f6b89d700582781b9476ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44c8691f3dcdf7cbecf981f75b0aa19d"><td class="memItemLeft" align="right" valign="top"><a id="a44c8691f3dcdf7cbecf981f75b0aa19d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>pwm_min</b></td></tr>
+<tr class="separator:a44c8691f3dcdf7cbecf981f75b0aa19d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab00456c3b1f38819bbfb1d3d9bfab9cb"><td class="memItemLeft" align="right" valign="top"><a id="ab00456c3b1f38819bbfb1d3d9bfab9cb"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>pwm_max</b></td></tr>
+<tr class="separator:ab00456c3b1f38819bbfb1d3d9bfab9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>PWM制御クラス作成用の抽象クラス </p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="aa326ff9ba5011dbf168d9c8742bb892d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa326ff9ba5011dbf168d9c8742bb892d">&#9670;&nbsp;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def pwm_controller.PWMController.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>config</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PWM制御クラスの初期化 </p>
+<p>PWMの最大、最小値および出力ピンの設定を行う. それぞれの値はconfig.ini内の'Min'、'Max'、'PwmPin'パラメータによって変更する。 </p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="../../d0/d47/pwm__controller_8py.html">pwm_controller.py</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>pwm_controller</b></li><li class="navelem"><a class="el" href="../../d5/da8/classpwm__controller_1_1PWMController.html">PWMController</a></li>
+    <li class="footer">構築:
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -2,7 +2,18 @@
 import RPi.GPIO as gpio
 from abc import *
 
+##
+# @file pwm_controller.py
+# @brief PWM制御用の抽象クラスと、スロットル、ステアリング制御用クラス
+
+
+##
+# @class PWMController
+# @brief PWM制御クラス作成用の抽象クラス
 class PWMController(metaclass=ABCMeta):
+    ##
+    # PWM制御クラスの初期化
+    # @details PWMの最大、最小値および出力ピンの設定を行う. それぞれの値はconfig.ini内の'Min'、'Max'、'PwmPin'パラメータによって変更する。
     def __init__(self, config):
         pwm_min = int(config['Min'])
         pwm_max = int(config['Max'])
@@ -28,11 +39,17 @@ class PWMController(metaclass=ABCMeta):
         """
         pass
 
+##
+#@brief ステアリングPWM出力制御クラス
 class Steer(PWMController):
     def __init__(self, config):
         print("Steer   :", end=" ")
         super().__init__(config)
 
+    ##
+    #@brief 受け取った-1.0~1.0のスケール値をPWMのdutyサイクルに変換する。
+    #@warning 入力したスケール値の絶対値が1.0を上回った場合、値の絶対値が0になるように調整される。
+    #@param float scale -1.0~1.0の小数値で指定
     def setScale(self, scale: float):
         if self.current_value == scale:
             return
@@ -49,6 +66,9 @@ class Steer(PWMController):
         self.pwm.ChangeDutyCycle(duty)
         print(duty)
 
+
+##
+#@brief スロットルPWM出力制御クラス
 class Throttle(PWMController):
     def __init__(self, config):
         dir_pin = int(config['DirectionPin'])
@@ -60,6 +80,11 @@ class Throttle(PWMController):
 
         super().__init__(config)
 
+    ##
+    #@brief 受け取った-1.0~1.0のスケール値をPWMのdutyサイクルに変換する.
+    #@details config.ini内の'DirectionPin'で設定したピンに方向の出力と'PWM_PIN'で指定したピンにPWMを出力する
+    #@warning 入力したスケール値の絶対値が1.0を上回った場合、値の絶対値が0になるように調整される。
+    #@param  float scale -1.0~1.0の小数値で指定
     def setScale(self, scale: float):
         if self.current_value == scale:
             return
