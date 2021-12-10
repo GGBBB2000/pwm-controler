@@ -1,0 +1,14 @@
+# ファイルは/etc/systemd/systemに置く
+[Unit]
+Description=pwm controller server
+
+[Service]
+# 使用する環境によって合わせる
+WorkingDirectory=/home/car/git/pwm-controller/
+ExecStart=/usr/bin/python3 server.py
+Restart=always
+Type=simple
+
+[Install]
+WantedBy = multi-user.target
+
